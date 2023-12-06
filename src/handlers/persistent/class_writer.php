@@ -136,7 +136,7 @@ class ezcDbSchemaPersistentClassWriter implements ezcDbSchemaFileWriter
         fwrite( $file, "    /**\n" );
         fwrite( $file, "     * Set the PersistentObject state.\n" );
         fwrite( $file, "     *\n" );
-        fwrite( $file, "     * @param array(string=>mixed) \$state The state to set.\n" );
+        fwrite( $file, "     * @param array<string, mixed> \$state The state to set.\n" );
         fwrite( $file, "     * @return void\n" );
         fwrite( $file, "     */\n" );
         fwrite( $file, "    public function setState(array \$state)\n" );
@@ -159,7 +159,7 @@ class ezcDbSchemaPersistentClassWriter implements ezcDbSchemaFileWriter
         fwrite( $file, "    /**\n" );
         fwrite( $file, "     * Get the PersistentObject state.\n" );
         fwrite( $file, "     *\n" );
-        fwrite( $file, "     * @return array(string=>mixed) The state of the object.\n" );
+        fwrite( $file, "     * @return array<string, mixed> The state of the object.\n" );
         fwrite( $file, "     */\n" );
         fwrite( $file, "    public function getState()\n" );
         fwrite( $file, "    {\n" );

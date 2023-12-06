@@ -53,7 +53,7 @@ interface ezcDbSchemaDbWriter extends ezcDbSchemaWriter
      * the definition.  The SQL queries are returned as an array.
      * 
      * @param ezcDbSchema $dbSchema
-     * @return array(string)
+     * @return string[]
      */
     public function convertToDDL( ezcDbSchema $dbSchema );
 

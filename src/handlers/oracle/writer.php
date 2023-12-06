@@ -225,7 +225,7 @@ class ezcDbSchemaOracleWriter extends ezcDbSchemaCommonSqlWriter implements ezcD
      * @param ezcDbSchemaDiff $dbSchemaDiff
      * @param ezcDbHandler    $db
      *
-     * @return array(string)
+     * @return string[]
      */
     public function convertDiffToDDL( ezcDbSchemaDiff $dbSchemaDiff, ezcDbHandler $db = null )
     {

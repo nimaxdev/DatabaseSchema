@@ -36,7 +36,7 @@ class ezcDbSchemaTable extends ezcBaseStruct
      *
      * The array is indexed with the field name.
      *
-     * @var array(string=>ezcDbSchemaField)
+     * @var array<string, ezcDbSchemaField>
      */
     public $fields;
 
@@ -46,15 +46,15 @@ class ezcDbSchemaTable extends ezcBaseStruct
      * The array is indexed with the index name, where the index with the name
      * 'primary' is a special one describing the primairy key.
      *
-     * @var array(string=>ezcDbSchemaIndex)
+     * @var array<string, ezcDbSchemaIndex>
      */
     public $indexes;
     
     /**
      * Constructs an ezcDbSchemaTable object.
      *
-     * @param array(string=>ezcDbSchemaField) $fields
-     * @param array(string=>ezcDbSchemaIndex) $indexes
+     * @param array<string, ezcDbSchemaField> $fields
+     * @param array<string, ezcDbSchemaIndex> $indexes
      */
     function __construct( $fields, $indexes = array() )
     {

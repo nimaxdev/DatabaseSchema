@@ -40,7 +40,7 @@ class ezcDbSchemaUniqueIndexNameValidator
      * they have been used before.
      *
      * @param ezcDbSchema $schema
-     * @return array(string)
+     * @return string[]
      */
     static public function validate( ezcDbSchema $schema )
     {

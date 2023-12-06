@@ -264,8 +264,8 @@ class ezcDbSchemaPersistentWriter implements ezcDbSchemaFileWriter
      * This method extracts the names of all primary keys from the index
      * defintions of a table.
      *
-     * @param array(string=>ezcDbSchemaIndex) $indexes Indices.
-     * @return array(string=>bool) The primary keys.
+     * @param array<string, ezcDbSchemaIndex> $indexes Indices.
+     * @return array<string, bool> The primary keys.
      */
     private function determinePrimaries( $indexes )
     {

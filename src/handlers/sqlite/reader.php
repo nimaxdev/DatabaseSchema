@@ -75,7 +75,7 @@ class ezcDbSchemaSqliteReader extends ezcDbSchemaCommonSqlReader implements ezcD
      * array is the name of the field.
      *
      * @param string $tableName
-     * @return array(string=>ezcDbSchemaField)
+     * @return array<string, ezcDbSchemaField>
      */
     protected function fetchTableFields( $tableName )
     {
@@ -223,7 +223,7 @@ class ezcDbSchemaSqliteReader extends ezcDbSchemaCommonSqlReader implements ezcD
      * ezcDbSchemaIndex objects. The key in the array is the index' name.
      *
      * @param  string $tableName
-     * @return array(string=>ezcDbSchemaIndex)
+     * @return array<string, ezcDbSchemaIndex>
      */
     protected function fetchTableIndexes( $tableName )
     {

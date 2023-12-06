@@ -35,30 +35,30 @@ class ezcDbSchemaDiff
     /**
      * All added tables
      *
-     * @var array(string=>ezcDbSchemaTable)
+     * @var array<string, ezcDbSchemaTable>
      */
     public $newTables;
 
     /**
      * All changed tables
      *
-     * @var array(string=>ezcDbSchemaTableDiff)
+     * @var array<string, ezcDbSchemaTableDiff>
      */
     public $changedTables;
 
     /**
      * All removed tables
      *
-     * @var array(string=>bool)
+     * @var array<string, bool>
      */
     public $removedTables;
 
     /**
      * Constructs an ezcDbSchemaDiff object.
      *
-     * @param array(string=>ezcDbSchemaTable)      $newTables
-     * @param array(string=>ezcDbSchemaTableDiff)  $changedTables
-     * @param array(string=>bool)                  $removedTables
+     * @param array<string, ezcDbSchemaTable>      $newTables
+     * @param array<string, ezcDbSchemaTableDiff>  $changedTables
+     * @param array<string, bool>                  $removedTables
      */
     public function __construct( $newTables = array(), $changedTables = array(), $removedTables = array() )
     {
@@ -172,7 +172,7 @@ class ezcDbSchemaDiff
      *         with the $format is not a database schema writer.
      *
      * @param string|ezcDbHandler $db
-     * @return array(string)
+     * @return string[]
      */
     public function convertToDDL( $db )
     {

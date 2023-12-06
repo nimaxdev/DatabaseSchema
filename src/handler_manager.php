@@ -41,7 +41,7 @@ class ezcDbSchemaHandlerManager
      * The property is an array where the key is the name of the format and the
      * value the classname that implements the read handler.
      *
-     * @var array(string=>string)
+     * @var array<string, string>
      */
     static public $readHandlers = array(
         'array' => 'ezcDbSchemaPhpArrayReader',
@@ -58,7 +58,7 @@ class ezcDbSchemaHandlerManager
      * The property is an array where the key is the name of the format and the
      * value the classname that implements the write handler.
      *
-     * @var array(string=>string)
+     * @var array<string, string>
      */
     static public $writeHandlers = array(
         'array' => 'ezcDbSchemaPhpArrayWriter',
@@ -76,7 +76,7 @@ class ezcDbSchemaHandlerManager
      * The property is an array where the key is the name of the format and the
      * value the classname that implements the read handler.
      *
-     * @var array(string=>string)
+     * @var array<string, string>
      */
     static public $diffReadHandlers = array(
         'array' => 'ezcDbSchemaPhpArrayReader',
@@ -89,7 +89,7 @@ class ezcDbSchemaHandlerManager
      * The property is an array where the key is the name of the format and the
      * value the classname that implements the write handler.
      *
-     * @var array(string=>string)
+     * @var array<string, string>
      */
     static public $diffWriteHandlers = array(
         'array' => 'ezcDbSchemaPhpArrayWriter',

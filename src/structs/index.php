@@ -36,7 +36,7 @@ class ezcDbSchemaIndex extends ezcBaseStruct
      *
      * The array is indexed with the name of the field.
      *
-     * @var array(string=>ezcDbSchemaIndexField)
+     * @var array<string, ezcDbSchemaIndexField>
      */
     public $indexFields;
 
@@ -57,7 +57,7 @@ class ezcDbSchemaIndex extends ezcBaseStruct
     /**
      * Constructs an ezcDbSchemaIndex object.
      *
-     * @param array(string=>ezcDbSchemaIndexField) $indexFields
+     * @param array<string, ezcDbSchemaIndexField> $indexFields
      * @param bool  $primary
      * @param bool  $unique
      */

@@ -100,7 +100,7 @@ class ezcDbSchemaPgsqlReader extends ezcDbSchemaCommonSqlReader implements ezcDb
      * array is the name of the field.
      *
      * @param string $tableName
-     * @return array(string=>ezcDbSchemaField)
+     * @return array<string, ezcDbSchemaField>
      */
     protected function fetchTableFields( $tableName )
     {
@@ -256,7 +256,7 @@ class ezcDbSchemaPgsqlReader extends ezcDbSchemaCommonSqlReader implements ezcDb
      * ezcDbSchemaIndex objects. The key in the array is the index' name.
      *
      * @param  string $tableName
-     * @return array(string=>ezcDbSchemaIndex)
+     * @return array<string, ezcDbSchemaIndex>
      */
     protected function fetchTableIndexes( $tableName )
     {

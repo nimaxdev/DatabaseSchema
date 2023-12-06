@@ -68,7 +68,7 @@ abstract class ezcDbSchemaCommonSqlReader implements ezcDbSchemaDbReader
      * This method extracts information about a database's schema from the
      * database itself and returns this schema as an ezcDbSchema object.
      *
-     * @param array(string) $tables
+     * @param string[] $tables
      * @return ezcDbSchema
      */
     protected function processSchema( array $tables )

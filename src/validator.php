@@ -69,7 +69,7 @@ class ezcDbSchemaValidator
      * @todo implement from an interface
      *
      * @param ezcDbSchema $schema
-     * @return array(string)
+     * @return string[]
      */
     static public function validate( ezcDbSchema $schema )
     {

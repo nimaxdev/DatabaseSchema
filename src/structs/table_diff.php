@@ -34,54 +34,54 @@ class ezcDbSchemaTableDiff extends ezcBaseStruct
     /**
      * All added fields
      *
-     * @var array(string=>ezcDbSchemaField)
+     * @var array<string, ezcDbSchemaField>
      */
     public $addedFields;
 
     /**
      * All changed fields
      *
-     * @var array(string=>ezcDbSchemaField)
+     * @var array<string, ezcDbSchemaField>
      */
     public $changedFields;
 
     /**
      * All removed fields
      *
-     * @var array(string=>bool)
+     * @var array<string, bool>
      */
     public $removedFields;
 
     /**
      * All added indexes
      *
-     * @var array(string=>ezcDbSchemaIndex)
+     * @var array<string, ezcDbSchemaIndex>
      */
     public $addedIndexes;
 
     /**
      * All changed indexes
      *
-     * @var array(string=>ezcDbSchemaIndex)
+     * @var array<string, ezcDbSchemaIndex>
      */
     public $changedIndexes;
 
     /**
      * All removed indexes
      *
-     * @var array(string=>bool)
+     * @var array<string, bool>
      */
     public $removedIndexes;
 
     /**
      * Constructs an ezcDbSchemaTableDiff object.
      *
-     * @param array(string=>ezcDbSchemaField) $addedFields
-     * @param array(string=>ezcDbSchemaField) $changedFields
-     * @param array(string=>bool)             $removedFields
-     * @param array(string=>ezcDbSchemaIndex) $addedIndexes
-     * @param array(string=>ezcDbSchemaIndex) $changedIndexes
-     * @param array(string=>bool)             $removedIndexes
+     * @param array<string, ezcDbSchemaField> $addedFields
+     * @param array<string, ezcDbSchemaField> $changedFields
+     * @param array<string, bool>             $removedFields
+     * @param array<string, ezcDbSchemaIndex> $addedIndexes
+     * @param array<string, ezcDbSchemaIndex> $changedIndexes
+     * @param array<string, bool>             $removedIndexes
      */
     function __construct( $addedFields = array(), $changedFields = array(),
             $removedFields = array(), $addedIndexes = array(), $changedIndexes =

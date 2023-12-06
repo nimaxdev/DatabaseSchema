@@ -87,7 +87,7 @@ class ezcDbSchema
     /**
      * Stores the schema information.
      *
-     * @var array(string=>ezcDbSchemaTable)
+     * @var array<string, ezcDbSchemaTable>
      */
     private $schema;
 
@@ -101,7 +101,7 @@ class ezcDbSchema
     /**
      * A list of all the supported database filed types
      *
-     * @var array(string)
+     * @var string[]
      */
     static public $supportedTypes = array(
         'integer', 'boolean', 'float', 'decimal', 'timestamp', 'time', 'date',
@@ -118,7 +118,7 @@ class ezcDbSchema
     /**
      * Constructs a new ezcDbSchema object with schema definition $schema.
      *
-     * @param array(ezcDbSchemaTable) $schema
+     * @param ezcDbSchemaTable[] $schema
      * @param array                   $data
      */
     public function __construct( array $schema, $data = array() )
@@ -244,7 +244,7 @@ class ezcDbSchema
      *         with the $format is not a database schema writer.
      *
      * @param string|ezcDbHandler $db
-     * @return array(string)
+     * @return string[]
      */
     public function convertToDDL( $db )
     {
@@ -265,7 +265,7 @@ class ezcDbSchema
      * The method returns an array where the key is the table name, and the
      * value the table definition stored in a ezcDbSchemaTable struct.
      *
-     * @return array(string=>ezcDbSchemaTable)
+     * @return array<string, ezcDbSchemaTable>
      */
     public function &getSchema()
     {
@@ -313,8 +313,8 @@ class ezcDbSchema
     /**
      * Returns an object to represent a table in the schema.
      *
-     * @param array(string=>ezcDbSchemaField) $fields
-     * @param array(string=>ezcDbSchemaIndex) $indexes
+     * @param array<string, ezcDbSchemaField> $fields
+     * @param array<string, ezcDbSchemaIndex> $indexes
      * @return ezcDbSchemaTable or an inherited class
      */
     static public function createNewTable( $fields, $indexes )
@@ -345,7 +345,7 @@ class ezcDbSchema
     /**
      * Returns an object to represent a table's field in the schema.
      *
-     * @param array(string=>ezcDbSchemaIndexField) $fields
+     * @param array<string, ezcDbSchemaIndexField> $fields
      * @param bool  $primary
      * @param bool  $unique
      * @return ezcDbSchemaIndex or an inherited class

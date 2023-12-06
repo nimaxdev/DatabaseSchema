@@ -41,7 +41,7 @@ class ezcDbSchemaAutoIncrementIndexValidator
      * containing error strings for each non-supported type that it finds.
      *
      * @param ezcDbSchema $schema
-     * @return array(string)
+     * @return string[]
      */
     static public function validate( ezcDbSchema $schema )
     {

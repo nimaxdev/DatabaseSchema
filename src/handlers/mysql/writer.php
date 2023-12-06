@@ -100,7 +100,7 @@ class ezcDbSchemaMysqlWriter extends ezcDbSchemaCommonSqlWriter implements ezcDb
      *
      * @param ezcDbSchemaDiff $dbSchemaDiff
      *
-     * @return array(string)
+     * @return string[]
      */
     public function convertDiffToDDL( ezcDbSchemaDiff $dbSchemaDiff )
     {

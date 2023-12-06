@@ -47,7 +47,7 @@ interface ezcDbSchemaDiffDbWriter extends ezcDbSchemaDiffWriter
      * differences from $schemaDiff. The SQL queries are returned as an array.
      * 
      * @param ezcDbSchemaDiff $schemaDiff
-     * @return array(string)
+     * @return string[]
      */
     public function convertDiffToDDL( ezcDbSchemaDiff $schemaDiff );
 }
