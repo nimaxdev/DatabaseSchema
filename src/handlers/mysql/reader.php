@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -53,15 +53,16 @@ class ezcDbSchemaMysqlReader extends ezcDbSchemaCommonSqlReader implements ezcDb
         'decimal' => 'decimal',
         'numeric' => 'decimal',
         'fixed' => 'decimal',
-        
+
         'date' => 'date',
         'datetime' => 'timestamp',
         'timestamp' => 'timestamp',
         'time' => 'time',
         'year' => 'integer',
-       
+
         'char' => 'text',
         'varchar' => 'text',
+        'enum' => 'text',
         'binary' => 'blob',
         'varbinary' => 'blob',
         'tinyblob' => 'blob',
@@ -96,7 +97,7 @@ class ezcDbSchemaMysqlReader extends ezcDbSchemaCommonSqlReader implements ezcDb
      * array is the name of the field.
      *
      * @param string $tableName
-     * @return array(string=>ezcDbSchemaField)
+     * @return array<string, ezcDbSchemaField>
      */
     protected function fetchTableFields( $tableName )
     {
@@ -110,7 +111,7 @@ class ezcDbSchemaMysqlReader extends ezcDbSchemaCommonSqlReader implements ezcDb
             $fieldLength = false;
 
             // bool and boolean is synonyms for TINYINT(1) in MySQL
-            if ( $row['type'] == 'tinyint(1)' ) 
+            if ( $row['type'] == 'tinyint(1)' )
             {
                 $fieldType = 'boolean';
             }
@@ -137,7 +138,7 @@ class ezcDbSchemaMysqlReader extends ezcDbSchemaCommonSqlReader implements ezcDb
                 {
                     $fieldDefault = ( $row['default'] == '0' ) ? 'false' : 'true';
                 }
-                else if ( $fieldType != 'timestamp' ) 
+                else if ( $fieldType != 'timestamp' )
                 {
                     $fieldDefault = $row['default'];
                 }
@@ -244,14 +245,14 @@ class ezcDbSchemaMysqlReader extends ezcDbSchemaCommonSqlReader implements ezcDb
      * ezcDbSchemaIndex objects. The key in the array is the index' name.
      *
      * @param  string $tableName
-     * @return array(string=>ezcDbSchemaIndex)
+     * @return array<string, ezcDbSchemaIndex>
      */
     protected function fetchTableIndexes( $tableName )
     {
         $indexBuffer = array();
 
         $resultArray = $this->db->query( "SHOW INDEX FROM `$tableName`" );
-        
+
         foreach ( $resultArray as $row )
         {
             $keyName = $row['key_name'];
